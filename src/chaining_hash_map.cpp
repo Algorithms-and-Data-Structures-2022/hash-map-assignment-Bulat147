@@ -142,7 +142,7 @@ namespace assignment {
     // пересчитываем индексы элементов словаря, учитывая новую емкость
     for (const Bucket& bucket : buckets_) {
       for (const Node& node : bucket) {
-        const int new_index = 0 /* напишите здесь свой код */;
+        const int new_index = hash(node.key, new_capacity);
         new_buckets[new_index].push_back(node);
       }
     }
