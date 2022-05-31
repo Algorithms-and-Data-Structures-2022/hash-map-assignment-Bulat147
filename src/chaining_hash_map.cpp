@@ -53,7 +53,7 @@ namespace assignment {
 
     // расширение словаря до новой емкости в случае превышения коэффициента заполнения
     if (num_keys_ / static_cast<double>(buckets_.size()) > load_factor_) {
-      const int new_capacity = kGrowthCoefficient;
+      const int new_capacity = kGrowthCoefficient * capacity();
       resize(new_capacity);
     }
 
